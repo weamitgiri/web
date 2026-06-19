@@ -48,3 +48,4 @@ Thumbs.db
 
 # Cloudflare
 .wrangler/
+src/config/environment.ts
