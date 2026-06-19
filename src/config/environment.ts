@@ -1,6 +1,6 @@
 /**
  * Environment Configuration
- * Centralized management of environment variables
+ * Centralized management of environment variables testing
  */
 
 export const ENV = {
