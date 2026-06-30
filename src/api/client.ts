@@ -80,7 +80,11 @@ class ApiClient {
     try {
       const response = await fetch(url, {
         ...fetchOptions,
+        mode: fetchOptions.mode || "cors",
+        credentials: fetchOptions.credentials || "include",
+        referrerPolicy: fetchOptions.referrerPolicy || "same-origin",
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
           ...(auth !== "none" ? this.getAuthHeader() : {}),
           ...(fetchOptions.headers || {}),
